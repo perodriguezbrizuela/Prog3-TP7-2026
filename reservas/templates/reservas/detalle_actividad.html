@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de actividad deportiva</title>
+</head>
+<body>
+    <header>
+        <h1>Detalle de actividad deportiva</h1>
+        <nav><a href="{% url 'reservas:lista_actividades' %}">Volver al listado</a></nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>{{ actividad.nombre }}</h2>
+                <p><strong>Identificador:</strong> {{ actividad.id }}</p>
+                <p><strong>Descripción:</strong> {{ actividad.descripcion }}</p>
+                <p><strong>Lugar:</strong> {{ actividad.lugar }}</p>
+                <p><strong>Cupo:</strong> {{ actividad.cupo }}</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
